@@ -34,7 +34,7 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         setupUI()
         
-        items.append(Task(value: ["text": "My First Task"]))
+        // items.append(Task(value: ["text": "My First Task"]))
         setupRealm()
     }
     
@@ -47,8 +47,8 @@ class ViewController: UITableViewController {
     }
     
     func setupRealm() {
-        let username = "touyou.dev@gmail.com"
-        let password = "testtest"
+        let username = "test"
+        let password = "test"
         
         User.authenticate(with: Credential.usernamePassword(username: username, password: password, actions: []), server: URL(string: "http://127.0.0.1:9080")!, onCompletion: { user, error in
             guard let user = user else {
